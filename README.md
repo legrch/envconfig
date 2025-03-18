@@ -74,6 +74,24 @@ missing required environment variable "DB_HOST" for field "Database.Host"
 
 This makes it much easier to track down configuration issues in complex applications.
 
+## Feature Comparison
+
+| Feature                             | Standard envconfig | Enhanced envconfig |
+|-------------------------------------|-------------------|-------------------|
+| Basic environment variable parsing  | ✅                | ✅                |
+| Required field validation           | ✅                | ✅                |
+| Field path in error messages        | ❌                | ✅                |
+| Multiple missing variables in report | ❌                | ✅                |
+| API compatibility                   | -                 | 100%              |
+
+## Best Practices
+
+1. Use meaningful environment variable names that reflect their purpose
+2. Group related variables with prefixes
+3. Document all environment variables in your application README
+4. Use required:"true" for mandatory configuration
+5. Provide default values for optional configuration
+
 ## Documentation
 
 For detailed documentation and API reference, please visit:
@@ -82,9 +100,6 @@ For detailed documentation and API reference, please visit:
 - [Original envconfig Documentation](https://github.com/kelseyhightower/envconfig) - Base library this package enhances
 
 ## Related Documentation
-
-### Project Documentation
-- [Detailed Usage](pkg/envconfig/README.md) - More detailed usage examples and documentation
 
 ### Official Documentation
 - [kelseyhightower/envconfig](https://github.com/kelseyhightower/envconfig) - Original envconfig library
